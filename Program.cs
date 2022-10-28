@@ -149,6 +149,58 @@ namespace LESSON_7__METHODS_
         //------------------------------------------------
         #endregion
 
+        // Task 4
+        #region
+        public static string IsPositiveAndNegative(int number)
+        {
+            if (number < 0)
+                return $"Negative number: {number}";
+            else
+                return $"Positive number: {number}";
+        }
+        //------------------------------------------------------------------
+
+        public static void IsPrime(int number)
+        {
+            int counter = 0;
+
+            for(int i = 2; i < (number/2+1); i++)
+            {
+                if(number % i == 0)
+                {
+                    counter++;
+                    break;
+                }
+            }
+
+            if(counter == 0)
+            {
+                Console.WriteLine($"Number: {number}");
+            }
+        }
+        //------------------------------------------------------------------
+
+        public static void DivideSomeNumbers()
+        {
+            int[] numbers = { 2, 3, 5, 6, 9 };
+            for(int i = 0; i < numbers.Length; i++)
+            {
+                if(numbers[0] % 2 == 0 && numbers[1] % 3 == 0 && numbers[2] % 5 == 0
+                    && numbers[3] % 6 == 0 && numbers[4] % 9 == 0)
+                {
+                    int elem = numbers[i];
+                    Console.WriteLine("The numbers are devide without reminder:\t" + elem);
+                }
+                else
+                {
+                    int elem = numbers[i];
+                    Console.WriteLine("The numbers aren't devide without reminder:\t" + elem);
+                }
+            }
+        }
+        //-----------------------------------------------------------------
+        #endregion
+
         static void Main(string[] args)
         {
             //-----------------------------------------------------------------
@@ -173,6 +225,22 @@ namespace LESSON_7__METHODS_
             //Console.WriteLine(Math.Round(prog.UAHtoUSD(), 2));
 
             //----------------------------------------------------------------- 
+
+            // Task 4
+
+            //Console.WriteLine(IsPositiveAndNegative(10));
+
+            //Console.Write("Enter the number ->\t");
+            //int number = int.Parse(Console.ReadLine());
+
+            //for (int i = 2; i < number + 1; i++)
+            //{
+            //    IsPrime(i);
+            //}
+
+            //DivideSomeNumbers();
+
+            //-----------------------------------------------------------------
         }
     }
 }
